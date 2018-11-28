@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>Python and Machine Learning blog</title>
+        <title>Skip local Dropbox directory and directly upload files</title>
         <meta charset="utf-8" />
         <meta name="generator" content="Pelican" />
+        <meta name="category" content="dropbox" />
+        <meta name="description" content="To directly upload files to Dropbox account without copying them to the local Dropbox folder use symbolic links (steps 1-6). Connect an external drive with the files you want to upload and create a symbolic link to from this external drive to your local Dropbox folder. The files will start …" />
         <meta name="author" content="Andrej Lukic" />
         <meta name="copyright" content="Andrej Lukic" />
-        <meta name="robots" content="noindex,follow">
+        <meta name="date" content="2018-08-04 00:00:00+02:00">
+        <meta name="robots" content="index,follow">
 
         <link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
 
@@ -29,17 +32,20 @@
                     <a href="/category/dropbox.html">dropbox</a>&nbsp;
                 </nav>
         </header><!-- /#banner -->
-        
-        
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="skip-local-dropbox-directory-directly-upload-files.html" rel="bookmark"
+           title="Permalink to Skip local Dropbox directory and directly upload files">Skip local Dropbox directory and directly upload files</a></h1>
+    </header>
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/skip-local-dropbox-directory-directly-upload-files.html">Skip local Dropbox directory and directly upload files</a></h1> 
+    <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2018-08-04T00:00:00+02:00">
                 Sa 04 August 2018
         </abbr>
-</footer><!-- /.post-info --><p><br />
+</footer><!-- /.post-info -->      <p><br />
 To directly upload files to Dropbox account without copying them to the local Dropbox folder use symbolic links (<a href="#ss">steps 1-6</a>). Connect an external drive with the files you want to upload and create a symbolic link to from this external drive to your local Dropbox folder. The files will start uploading to your Dropbox account without being physically copied to the local Dropbox folder. After the files have uploaded, disconnect and physically remove the external drive with the files and use Selective sync to prevent copying files back to your local drive. The last step is to remove the symbolic link. </p>
 <p>(PS The safe solution is to use the Dropbox web interface and hopefully they will some day fix the limit on the number of files simultaneously uploaded, because this makes it impractical in case you have to upload many files)</p>
 <p><a name="ss">Step by step</a></p>
@@ -51,10 +57,11 @@ To directly upload files to Dropbox account without copying them to the local Dr
 <p>Step 5 - Use selective sync option in the Dropbox settings to prevent downloading the new files back to your local Dropbox direcory (<a href="static/2018-dbgf/004.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>) - remember to first disconnect the external drive</p>
 <p>Step 6 - Use rmdir command to remove the symbolic link (<a href="static/2018-dbgf/005.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>)</p>
 <p>That's all!</p>
-<p>~                                                        </p>                </article>
-            </aside><!-- /#featured -->
-            </ol><!-- /#posts-list -->
-            </section><!-- /#content -->
+<p>~                                                        </p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>blogroll</h2>

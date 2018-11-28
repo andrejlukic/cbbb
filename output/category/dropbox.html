@@ -27,7 +27,6 @@
                 <h1><a href="">Python and Machine Learning blog </a></h1>
                 <nav>
                     <a href="/category/dropbox.html">dropbox</a>&nbsp;
-                    <a href="/category/other.html">other</a>&nbsp;
                 </nav>
         </header><!-- /#banner -->
         
@@ -35,47 +34,25 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/how-to-directly-upload-large-files-to-dropbox-from-external-drive.html">How to directly upload files to Dropbox without copying them to a your local Dropbox folder</a></h1> 
+                    <h1 class="entry-title"><a href="/skip-local-dropbox-directory-directly-upload-files.html">Skip local Dropbox directory and directly upload files</a></h1> 
 <footer class="post-info">
         <abbr class="published" title="2018-08-04T00:00:00+02:00">
                 Sa 04 August 2018
         </abbr>
-</footer><!-- /.post-info --><p>[Directly upload files to Dropbox] To upload files directly to your Dropbox account and not copy them first to your local Dropbox folder is a bit of a hassle. The easiest way is to connect an external drive with the files you want to upload and then create a symbolic link to your local Dropbox folder. After this, the files will start uploading from your external drive to your Dropbox account without being physically copied to your local dropbox folder. After the files have uploaded disconnect and physically remove the external drive with the files and then go into Dropbox Settings -&gt; Selective sync and uncheck the newly created folder. This way it wont sync back to your local drive. Dropbox will at this point try to delete the local files, this is why the external drive was removed in the previous step. The last step is to remove the symbolic link. </p>
-<p>(PS The prefered and safe solution is still to use the Dropbox web interface, hopefully they'll fix the limit on the number of files simultaneously uploaded, which makes it impractical in case you have to upload many files)</p>
-<p>Step by step</p>
-<p>D:\Dropbox = your local Dropbox direcory</p>
-<p>E:\newfiles = files, that you want to add without copying them to your Dropbox directory</p>
+</footer><!-- /.post-info --><p><br />
+To directly upload files to Dropbox account without copying them to the local Dropbox folder use symbolic links (<a href="#ss">steps 1-6</a>). Connect an external drive with the files you want to upload and create a symbolic link to from this external drive to your local Dropbox folder. The files will start uploading to your Dropbox account without being physically copied to the local Dropbox folder. After the files have uploaded, disconnect and physically remove the external drive with the files and use Selective sync to prevent copying files back to your local drive. The last step is to remove the symbolic link. </p>
+<p>(PS The safe solution is to use the Dropbox web interface and hopefully they will some day fix the limit on the number of files simultaneously uploaded, because this makes it impractical in case you have to upload many files)</p>
+<p><a name="ss">Step by step</a></p>
 <p>Step 1 - Open Windows command prompt (cmd.exe) under administrator priviliges and change to your local Dropbox directory (<a href="static/2018-dbgf/001.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>)</p>
-<p>Step 2 - Create a symbolic link from your external drive E:\newfiles to your local Dropbox directory (<a href="static/2018-dbgf/002.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>)</p>
+<p>Step 2 - Create a symbolic link connecting files on the external drive E:\newfiles to somewhere inside your local Dropbox directory (<a href="static/2018-dbgf/002.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>)</p>
 <p><img src="static/2018-dbgf/002.gif" alt="drawing" style="width:600px;"/></p>
-<p>Step 3 - Wait until files are uplouded</p>
-<p>Step 4 - Remove (and physically disconnect!) your external drive (<a href="static/2018-dbgf/003.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>)</p>
-<p>Step 5 - Open Dropbox settings, selective sync and remove the sym_link directory. (<a href="static/2018-dbgf/004.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>)</p>
+<p>Step 3 - Wait until Dropbox finishes indexing and uploading all the files to cloud</p>
+<p>Step 4 - Physically disconnect your external drive containing files from your computer to prevent Dropbox deleting them in the next step (<a href="static/2018-dbgf/003.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>)</p>
+<p>Step 5 - Use selective sync option in the Dropbox settings to prevent downloading the new files back to your local Dropbox direcory (<a href="static/2018-dbgf/004.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>) - remember to first disconnect the external drive</p>
 <p>Step 6 - Use rmdir command to remove the symbolic link (<a href="static/2018-dbgf/005.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>)</p>
 <p>That's all!</p>
 <p>~                                                        </p>                </article>
             </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
-        
-
- 
-            <li><article class="hentry">    
-                <header>
-                    <h3><a href="/upload-large-files-diretly-to-dropbox-de.html" rel="bookmark"
-                           title="Permalink to Upload files directly to Dropbox">Upload files directly to Dropbox</a></h3>
-                </header>
-                
-                <div class="entry-content">
-                <p>[Upload files directly to Dropbox] howto copy files to dropbox windows 10
-Original dropbox folder = D:Dropbox (on the drive, where there is not enough disk space)
-Folder we want to add to Dropbox account directly, without copying to disk D. = Z:\BigFiles
-open CMD.exe under administrator priviliges
-D …</p>
-                <a class="readmore" href="/upload-large-files-diretly-to-dropbox-de.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
             </ol><!-- /#posts-list -->
             </section><!-- /#content -->
         <section id="extras" class="body">
