@@ -5,9 +5,9 @@ category: dropbox
 date: 2018-08-04
 modified: 2018-08-04
 
-[Directly upload files to Dropbox] To upload files directly to your Dropbox account and not copy them first to your local Dropbox folder is a bit of a hassle. The easiest way is to connect an external drive with the files you want to upload and then create a symbolic link to your local Dropbox folder. After this, the files will start uploading from your external drive to your Dropbox account without being physically copied to your local dropbox folder. But what matters are the steps after the files have been uploaded: first disconnect and physically remove the external drive with the files and then go into Dropbox Settings -> Selective sync and uncheck the newly created folder so that it wont sync back to your local drive. Dropbox will try to delete the local files, but the external drive was removed in the previous step. The last step is to remove the symbolic link. 
+[Directly upload files to Dropbox] To upload files directly to your Dropbox account and not copy them first to your local Dropbox folder is a bit of a hassle. The easiest way is to connect an external drive with the files you want to upload and then create a symbolic link to your local Dropbox folder. After this, the files will start uploading from your external drive to your Dropbox account without being physically copied to your local dropbox folder. After the files have uploaded disconnect and physically remove the external drive with the files and then go into Dropbox Settings -> Selective sync and uncheck the newly created folder. This way it wont sync back to your local drive. Dropbox will at this point try to delete the local files, this is why the external drive was removed in the previous step. The last step is to remove the symbolic link. 
 
-(The prefered and safe solution is to use the Dropbox web interface, but the last time I checked they had a limit on the number of files simultaneously uploaded, which makes it impractical in case you have to upload many files)
+(PS The prefered and safe solution is still to use the Dropbox web interface, hopefully they'll fix the limit on the number of files simultaneously uploaded, which makes it impractical in case you have to upload many files)
 
 Step by step
 
