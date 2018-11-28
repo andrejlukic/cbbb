@@ -5,7 +5,7 @@
         <meta charset="utf-8" />
         <meta name="generator" content="Pelican" />
         <meta name="category" content="dropbox" />
-        <meta name="description" content="To directly upload files to your Dropbox account without copying them to the local Dropbox folder use symbolic links (steps 1-7). This is an alternative to using the Dropbox web interface, which can be impractical in case you have to upload many files. Step by step Step 1 - Connect an …" />
+        <meta name="description" content="To directly upload files to your Dropbox account without copying them to the local Dropbox folder use symbolic links (steps 1-7). This is an alternative to using the Dropbox web interface, which can be impractical in case you have to upload many files. Step by step Connect an external drive …" />
         <meta name="author" content="Andrej Lukic" />
         <meta name="copyright" content="Andrej Lukic" />
         <meta name="date" content="2018-08-04 00:00:00+02:00">
@@ -48,14 +48,29 @@
 </footer><!-- /.post-info -->      <p><br />
 To directly upload files to your Dropbox account without copying them to the local Dropbox folder use symbolic links (<a href="#ss">steps 1-7</a>). This is an alternative to using the Dropbox web interface, which can be impractical in case you have to upload many files.</p>
 <p><a name="ss">Step by step</a></p>
-<p>Step 1 - Connect an external drive with the files you want to upload directly. An external drive is handy, because you can physically remove it in step 5</p>
-<p>Step 2 - Open Windows command prompt (cmd.exe) under administrator priviliges and change to your local Dropbox directory (<a href="static/2018-dbgf/001.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>)</p>
-<p>Step 3 - Create a symbolic link connecting files on the external drive E:\newfiles to somewhere inside your local Dropbox directory (<a href="static/2018-dbgf/002.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>)</p>
-<p><img src="static/2018-dbgf/002.gif" alt="drawing" style="width:600px;"/></p>
-<p>Step 4 - Wait until Dropbox finishes indexing and uploading all the files to cloud</p>
-<p>Step 5 - Physically disconnect your external drive containing files from your computer to prevent Dropbox deleting them in the next step (<a href="static/2018-dbgf/003.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>)</p>
-<p>Step 6 - Use selective sync option in the Dropbox settings to prevent downloading the new files back to your local Dropbox direcory (<a href="static/2018-dbgf/004.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>) - remember to first disconnect the external drive</p>
-<p>Step 7 - Use rmdir command to remove the symbolic link (<a href="static/2018-dbgf/005.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>)</p>
+<ol>
+<li>
+<p>Connect an external drive with the files you want to upload directly. An external drive is handy, because you can physically remove it in step 5</p>
+</li>
+<li>
+<p>Open Windows command prompt (cmd.exe) under administrator priviliges and change to your local Dropbox directory (<a href="static/2018-dbgf/001.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>)</p>
+</li>
+<li>
+<p>Create a symbolic link connecting files on the external drive E:\newfiles to somewhere inside your local Dropbox directory (<a href="static/2018-dbgf/002.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>) <img src="static/2018-dbgf/002.gif" alt="drawing" style="margin-top:20px; width:600px;"/></p>
+</li>
+<li>
+<p>Wait until Dropbox finishes indexing and uploading all the files to cloud</p>
+</li>
+<li>
+<p>Physically disconnect your external drive containing files from your computer to prevent Dropbox deleting them in the next step (<a href="static/2018-dbgf/003.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>)</p>
+</li>
+<li>
+<p>Use selective sync option in the Dropbox settings to prevent downloading the new files back to your local Dropbox direcory (<a href="static/2018-dbgf/004.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>) - remember to first disconnect the external drive</p>
+</li>
+<li>
+<p>Use rmdir command to remove the symbolic link (<a href="static/2018-dbgf/005.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>)</p>
+</li>
+</ol>
 <p>That's all!</p>
 <p>~                                                        </p>
     </div><!-- /.entry-content -->

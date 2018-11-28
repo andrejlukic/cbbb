@@ -22,9 +22,9 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Kaggle', 'https://www.kaggle.com/learn/machine-learning-explainability'),
-         ('Python.org', 'http://python.org/'),
-         ('Pelican', 'https://blog.getpelican.com/category/news.html'))
+#LINKS = (('Kaggle', 'https://www.kaggle.com/learn/machine-learning-explainability'),
+#         ('Python.org', 'http://python.org/'),
+#         ('Pelican', 'https://blog.getpelican.com/category/news.html'))
 
 # Social widget
 SOCIAL = (('LinkedIn', 'https://www.linkedin.com/in/andrej-lukic/'),)
