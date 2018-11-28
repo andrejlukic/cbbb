@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>How to directly upload files to Dropbox without copying them to a your local Dropbox folder</title>
+        <meta charset="utf-8" />
+        <meta name="generator" content="Pelican" />
+        <meta name="category" content="dropbox" />
+        <meta name="description" content="[Directly upload files to Dropbox] To upload files directly to your Dropbox account and not copy them first to your local Dropbox folder is a bit of a hassle. The easiest way is to connect an external drive with the files you want to upload and then create a symbolic …" />
+        <meta name="author" content="Andrej Lukic" />
+        <meta name="copyright" content="Andrej Lukic" />
+        <meta name="date" content="2018-08-04 00:00:00+02:00">
+        <meta name="robots" content="index,follow">
+
+        <link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
+
+        <!--[if IE]>
+                <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <!--[if lte IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="/css/ie.css"/>
+                <script src="/js/IE8.js" type="text/javascript"></script><![endif]-->
+
+        <!--[if lt IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="/css/ie6.css"/><![endif]-->
+
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="">Python and Machine Learning blog </a></h1>
+                <nav>
+                    <a href="/category/dropbox.html">dropbox</a>&nbsp;
+                    <a href="/category/other.html">other</a>&nbsp;
+                </nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="how-to-directly-upload-large-files-to-dropbox-from-external-drive.html" rel="bookmark"
+           title="Permalink to How to directly upload files to Dropbox without copying them to a your local Dropbox folder">How to directly upload files to Dropbox without copying them to a your local Dropbox folder</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2018-08-04T00:00:00+02:00">
+                Sa 04 August 2018
+        </abbr>
+</footer><!-- /.post-info -->      <p>[Directly upload files to Dropbox] To upload files directly to your Dropbox account and not copy them first to your local Dropbox folder is a bit of a hassle. The easiest way is to connect an external drive with the files you want to upload and then create a symbolic link to your local Dropbox folder. After this, the files will start uploading from your external drive to your Dropbox account without being physically copied to your local dropbox folder. But what matters are the steps after the files have been uploaded: first disconnect and physically remove the external drive with the files and then go into Dropbox Settings -&gt; Selective sync and uncheck the newly created folder so that it wont sync back to your local drive. Dropbox will try to delete the local files, but the external drive was removed in the previous step. The last step is to remove the symbolic link. </p>
+<p>(The prefered and safe solution is to use the Dropbox web interface, but the last time I checked they had a limit on the number of files simultaneously uploaded, which makes it impractical in case you have to upload many files)</p>
+<p>Step by step</p>
+<p>D:\Dropbox = your local Dropbox direcory</p>
+<p>E:\newfiles = files, that you want to add without copying them to your Dropbox directory</p>
+<p>Step 1 - Open Windows command prompt (cmd.exe) under administrator priviliges and change to your local Dropbox directory (<a href="static/2018-dbgf/001.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>)</p>
+<p>Step 2 - Create a symbolic link from your external drive E:\newfiles to your local Dropbox directory (<a href="static/2018-dbgf/002.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>)</p>
+<p><img src="static/2018-dbgf/002.gif" alt="drawing" style="width:600px;"/></p>
+<p>Step 3 - Wait until files are uplouded</p>
+<p>Step 4 - Remove (and physically disconnect!) your external drive (<a href="static/2018-dbgf/003.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>)</p>
+<p>Step 5 - Open Dropbox settings, selective sync and remove the sym_link directory. (<a href="static/2018-dbgf/004.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>)</p>
+<p>Step 6 - Use rmdir command to remove the symbolic link (<a href="static/2018-dbgf/005.gif" alt="drawing" style="width:400px;" target="_blank" >screenshot</a>)</p>
+<p>That's all!</p>
+<p>~                                                        </p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="https://www.kaggle.com/learn/machine-learning-explainability">Kaggle</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="https://blog.getpelican.com/category/news.html">Pelican</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="https://www.linkedin.com/in/andrej-lukic/">LinkedIn</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                     Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="https://www.python.org/">Python</a>. Theme is using <a href="https://github.com/getpelican/pelican-themes" target="_blank">cebong</a>.
+                </address><!-- /#about -->
+
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
