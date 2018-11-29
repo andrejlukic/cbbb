@@ -4,8 +4,8 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Andrej Lukic'
 SITENAME = 'Python and Machine Learning blog'
-#SITEURL = 'http://crunchymebumblebee.org'
-THEME = 'pelican-simplegrey'
+#SITEURL = 'https://crunchymebumblebee.org'
+THEME = './pelican-simplegrey-custom'
 OUTPUT_PATH = 'docs/'
 #SITETAGLINE='this is a tagline'
 
@@ -26,7 +26,15 @@ AUTHOR_FEED_RSS = None
 GOOGLE_ANALYTICS = "UA-130113606-1"
 
 EXTRA_PATH_METADATA = {
-    'extra/favicon.ico': {'path': 'favicon.ico'}  # and this
+    'extra/favicon.ico': {'path': 'favicon.ico'},  # and this
+	'extra/mstile-150x150.png': {'path': 'mstile-150x150.png'},  # and this
+	'extra/safari-pinned-tab.svg': {'path': 'safari-pinned-tab.svg'},  # and this
+	'extra/site.webmanifest': {'path': 'site.webmanifest'},  # and this
+	'extra/android-chrome-192x192.png': {'path': 'android-chrome-192x192.png'},  # and this
+	'extra/apple-touch-icon.png': {'path': 'apple-touch-icon.png'},  # and this
+	'extra/browserconfig.xml': {'path': 'browserconfig.xml'},  # and this
+	'extra/favicon-16x16.png': {'path': 'favicon-16x16.png'},  # and this
+	'extra/favicon-32x32.png': {'path': 'favicon-32x32.png'},  # and this
 }
 
 # Blogroll
