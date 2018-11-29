@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = 'Andrej Lukic'
 SITENAME = 'Python and Machine Learning blog'
 #SITEURL = 'http://crunchymebumblebee.org'
-THEME = 'cebong'
+THEME = 'pelican-simplegrey'
 #SITETAGLINE='this is a tagline'
 
 STATIC_PATHS = ['posts', 'static']
