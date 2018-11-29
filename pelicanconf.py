@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Andrej Lukic'
 SITENAME = 'Python and Machine Learning blog'
-#SITEURL = 'https://crunchymebumblebee.org'
+SITEURL = 'https://crunchymebumblebee.org'
 THEME = './pelican-simplegrey-custom'
 OUTPUT_PATH = 'docs/'
 #SITETAGLINE='this is a tagline'
