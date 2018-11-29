@@ -21,6 +21,9 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+#DISQUS_SITENAME = ""
+GOOGLE_ANALYTICS = "UA-130113606-1"
+
 # Blogroll
 #LINKS = (('Kaggle', 'https://www.kaggle.com/learn/machine-learning-explainability'),
 #         ('Python.org', 'http://python.org/'),
