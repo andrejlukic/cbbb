@@ -8,7 +8,7 @@ SITENAME = 'Python and Machine Learning blog'
 THEME = 'pelican-simplegrey'
 #SITETAGLINE='this is a tagline'
 
-STATIC_PATHS = ['posts', 'static']
+STATIC_PATHS = ['posts', 'static', 'extra']
 # ARTICLE_SAVE_AS = '{date:%Y}/{slug}.html'
 # ARTICLE_URL = '{date:%Y}/{slug}.html'
 DEFAULT_LANG = 'en'
@@ -23,6 +23,10 @@ AUTHOR_FEED_RSS = None
 
 #DISQUS_SITENAME = ""
 GOOGLE_ANALYTICS = "UA-130113606-1"
+
+EXTRA_PATH_METADATA = {
+    'extra/favicon.ico': {'path': 'favicon.ico'}  # and this
+}
 
 # Blogroll
 #LINKS = (('Kaggle', 'https://www.kaggle.com/learn/machine-learning-explainability'),
