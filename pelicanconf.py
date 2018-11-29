@@ -6,6 +6,7 @@ AUTHOR = 'Andrej Lukic'
 SITENAME = 'Python and Machine Learning blog'
 #SITEURL = 'http://crunchymebumblebee.org'
 THEME = 'pelican-simplegrey'
+OUTPUT_PATH = 'docs/'
 #SITETAGLINE='this is a tagline'
 
 STATIC_PATHS = ['posts', 'static', 'extra']
