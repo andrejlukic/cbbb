@@ -2,7 +2,7 @@ title: Mini EDA (exploratory data analysis) of an e-commerce customer behavior
 slug: eda-ecommerce
 lang: en
 category: python
-date: 2018-12-10
+date: 2018-12-12
 modified: 2018-12-10
 <br />
 The idea is to play around a little bit with Python/Pandas and perform a basic EDA for an ecommerce store. The focus will be on customer behavior, as I find it is often more fun than the usual business KPIs. What can be seen from a simple order history, which would be something, that every ecommerce platform has stored. In this case the data was randomly generated.
