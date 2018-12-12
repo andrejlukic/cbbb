@@ -3,8 +3,8 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Andrej Lukic'
-SITENAME = 'Python and Machine Learning blog'
-SITEURL = 'https://crunchymebumblebee.org'
+SITENAME = '/blog'
+SITEURL = 'https://andrejlukic.de'
 THEME = './pelican-simplegrey-custom'
 OUTPUT_PATH = 'docs/'
 #SITETAGLINE='this is a tagline'
@@ -23,7 +23,9 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 #DISQUS_SITENAME = ""
-GOOGLE_ANALYTICS = "UA-130113606-1"
+#GOOGLE_ANALYTICS = "UA-130113606-1"
+GOOGLE_ANALYTICS = "UA-130263526-1"
+
 
 EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'},  # and this
