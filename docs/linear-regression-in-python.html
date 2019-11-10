@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="">	
+<head>
+	<meta charset="utf-8"/>
+	<title>Linear Regression in Python - /blog</title>	
+	<meta name="author" content="Andrej Lukic">
+	
+
+	<meta name="description" content="Linear regression is a modeling technique, in which we look for a linear relationship between the dependand and independand variable(s). Simple Linear Regression When we have a single independand variable we can use the "simple linear regression" to fit a regression line through a set of paired data observations …">
+
+
+	<link rel="top" href="#" /><link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic|Source+Code+Pro' rel='stylesheet' type='text/css'></link>
+	<link rel="stylesheet" href="https://andrejlukic.de/theme/css/main.css" type="text/css" />
+		
+
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+</head>
+	
+<body>
+
+    <div class="container">
+	  
+	  <header role="banner">
+	    <div class="feeds">
+	    </div>
+	      <nav class="pages">
+	      </nav>
+		<a href="https://andrejlukic.de" class="title">/blog</a>
+      </header>
+	
+	  <div class="wrapper">
+
+		  <div role="main" class="content">
+	<article class="full">
+			
+		<h1>Linear Regression in Python</h1>
+		
+<div class="metadata">
+  <time datetime="2019-02-19T00:00:00+01:00" pubdate>Tue 19 February 2019</time>
+    <address class="vcard author">
+      by <a class="url fn" href="https://andrejlukic.de/author/andrej-lukic.html">Andrej Lukic</a>
+    </address>
+  in <a href="https://andrejlukic.de/category/python.html">python</a>
+</div>		
+		<p><br />
+Linear regression is a modeling technique, in which we look for a linear relationship between the dependand and independand variable(s). </p>
+<h3>Simple Linear Regression</h3>
+<p>When we have a single independand variable we can use the "simple linear regression" to fit a regression line through a set of paired data observations.
+If we take dataset of n paired observations, for which we believe, they are in a linear relationship, we can try and fit a regression line in such a way, that it lies the closest to all the data points. By close we consider the distance between the estimated point and the data point along the vertical axis.
+We measure the fit by measuring the sum of squares of these errors and this is referred to least squares fit. 
+Q = sum( (yi − (β0 + β1xi))2 )
+This is the function we want to minimize to fit the curve.</p>
+<p>If we visualize the curve of this function, we get:</p>
+<h1>visualize the curve</h1>
+<p>https://scipython.com/blog/visualizing-the-gradient-descent-method/</p>
+<h3>Closed form solution</h3>
+<p>To minimize function Q we calculate partial derivatives with respect to β0 and β1 and setting both expressions to zero, because we are looking for a minimum. These are called the normal equations.
+β1 = SXY / SXX 
+and
+βˆ0 = y¯ − βˆ1 x¯
+the estimate of the error variance is:
+σˆ 2 = SSE / (n − 2)</p>
+<p>We are left with the final solution y = βˆ0 + βˆ1x, which fits our regression line through the data points.</p>
+<p>What is the probability that the error is more than E? (if we assume that the errors are normally distributed with N(βˆ0 + βˆ1x, sigma)</p>
+<h3>Solving with gradient descent</h3>
+<p>To solve with a gradient descent we can pick any inital random value. With the help of partial derivatives we can then determine, which way is "down" towards the minimum.</p>
+<h1>visualize the curve</h1>
+<p>https://scipython.com/blog/visualizing-the-gradient-descent-method/</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+</pre></div>
+
+
+<p>:</p>
+<p>yi = β0 + β1xi + err</p>
+<p>The estimated value Yi is composed of a linear function β0 + β1xi and some error ei along the vertical axis. If we assume normal distribution for the error term ei, N(0,sigma) with some error variance sigma,
+we can say, that our estimated value Yi falls along normal distribution Yi ~ N(β0 + β1xi, σ2)</p>
+<p>The parameters β0, β1 are not known and must be estimated from the given data. β0 is known as the intercept and β1 as the slope parameter. The slope of the function tells us how the expected value of the dependand variable depends upon the independand variable. If the two variables are unrelated the slope parameter will equal 0.</p>
+<p><img src="static/2018-12-eda_ecomm/2018-12-10-EDA_ecomm-001.png" alt="drawing" style="margin-top:20px; width:800px;"/></p>
+<p>Although this was a super short dive into data analysis, I must say, that coming from the world of web development and relational databases, I am amazed at how simple and efficient python/pandas is when it comes to wrangling, transforming and visualizing data.</p>
+<p>That's all!</p>
+<p>~                                                        </p>	
+
+	</article>
+
+    <p>
+	<a href="https://twitter.com/share" class="twitter-share-button" data-via="" data-lang="en" data-size="large" data-related="">Tweet</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</p>
+
+
+		  </div>	
+		  
+		  <div class="sidebar">
+
+	        <nav>
+	          <h2>Categories</h2>
+	          <ul>
+	              <li ><a href="https://andrejlukic.de/category/dropbox.html">dropbox</a></li>
+	              <li class="active"><a href="https://andrejlukic.de/category/python.html">python</a></li>
+	          </ul>
+	        </nav>
+
+	          <aside>
+	          <h2>Social</h2>
+			    <ul class="social">
+				  <li><a href="https://www.linkedin.com/in/andrej-lukic/">LinkedIn</a><i></i></li>
+			    </ul>
+			  </aside>
+
+
+		  </div>
+
+	  </div>
+
+      <footer>
+		<p role="contentinfo">
+		  © 2013 Andrej Lukic - Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>. Theme <a href="https://github.com/fle/pelican-simplegrey">pelican-simplegrey</a>.
+    	</p>
+
+	  </footer>	
+
+	</div>
+	
+	  <script>
+		var _gaq=[['_setAccount','UA-130263526-1'],['_trackPageview']];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
+	  </script>
+
+</body>
+</html>
